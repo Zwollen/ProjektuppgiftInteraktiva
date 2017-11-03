@@ -1,0 +1,240 @@
+﻿body
+{	
+	min-height: 500px;
+	clear: both;
+	padding-top: 95px;
+	background: #dcd0c0;
+	font: 13px/14px Verdana, Sans-Serif;
+	color: #555;
+	margin: 0;
+	
+}
+#wrapper
+{
+	min-height:100%;
+	position:relative;	
+	margin-bottom: 350px;
+}
+#logo
+{	
+	float: left;
+	background: url(img/logo2.png) no-repeat center;
+	width: 124px;
+	height: 90px;
+	
+}
+nav
+{
+	float: right;
+	padding: 15px 20px 20px 0;
+}
+nav ul li
+{
+	display: inline-block;
+	float: left;
+	padding: 10px;
+}
+nav a
+{
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+	
+}
+a:hover
+{
+	color: white;
+	text-decoration: underline;
+}
+ul
+{
+	list-style: none;
+	
+}
+li
+{
+	list-style: none;
+}
+img
+{
+	text-align: center;
+	max-width: 100%;
+	height: auto;
+	width: auto;
+}
+h1
+{
+	text-align: center;
+	font-size: 180%;
+	line-height: 120%;	
+}
+h2
+{
+	text-align: left;
+	font-size: 80%;
+	line-height: 100%;
+	text-decoration: underline;
+}
+section
+{
+	color: black;
+	background: #fff;
+	float: left;
+	width: 25%;
+	margin: 2% 2%;
+	text-align: center;	
+}
+header
+{
+	background: #404040;
+	width: 100%;
+	height: 95px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	opacity: 0.8;
+}
+#menu-icon
+{
+	display: hidden;
+	background: url(https://www.w3newbie.com/wp-content/uploads/icon.png) center;
+	width: 40px;
+	height: 40px;
+}
+.current
+{
+	color: white;
+	text-decoration: underline;
+}
+footer
+{	
+	background: #404040;
+	width: 100%;
+	overflow: hidden;	
+	height:140px;
+	position:fixed;
+	bottom:0;
+	left:0;
+	float: left;	
+}
+footer p, footer h3
+{
+	color: white;
+}
+footer p a
+{
+	color: white;
+	text-decoration: none;
+}
+footer section
+{
+	
+	background: #404040;	
+}
+ul.social li
+{
+	display: inline;	
+}
+ul.social li img
+{
+	height: 35px;	
+}
+
+#login
+{
+	text-align:center;	
+	width: 25%;
+	margin: 20px auto 0px;
+	color: black;
+	text-decoration: none;
+}
+.building
+{
+	position: absolute;
+	top: 0; bottom:0; left: 0; right:0;
+    margin: auto;
+}
+.recommendations section a
+{
+	color: black;
+	font-weight: bold;
+	text-decoration: none;
+}
+.series section li
+{
+	font-size: 14px;
+}
+@media screen and (max-width: 800px)
+{	
+	
+	#menu-icon
+	{
+		display: inline-block;
+	}
+	nav ul, nav:active ul
+	{
+		display: none;
+		position: absolute;
+		padding: 15px;
+		background: #333333;
+		border: 1px solid #FFF;
+		right: 40px;
+		top: 60px;
+		width: 50%;
+		border-radius: 1px;
+	}
+	nav li
+	{
+		text-align: center;
+		width: 100%;
+		padding: 5px 0;		
+		margin: 0;
+	}
+	nav:hover ul
+	{
+		display: block;
+	}
+	section
+	{
+		float: left;
+		width: 100%;
+		margin: 0;
+		padding: 10px;
+		margin-bottom: 120px;	
+		
+	}
+}
+	@media screen and (max-width: 500px)
+{
+	body:
+	{
+		position: absolute;
+	}
+	footer
+	{	
+	background: #404040;
+	width: 100%;
+	overflow: hidden;	
+	height:90px;
+	position:fixed;
+	bottom:0;
+	left:0;
+	float: left;	
+	}
+	footer p, footer h3
+	{
+	color: white;
+	font-size: 90%;
+	}
+	footer p a
+	{
+	color: white;
+	text-decoration: none;
+	
+	}
+	footer section
+	{	
+	background: #404040;	
+	}
+}
