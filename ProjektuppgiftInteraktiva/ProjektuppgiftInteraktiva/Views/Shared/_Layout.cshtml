@@ -21,6 +21,10 @@
                 <li>@Html.ActionLink("Turbo-TV Tipsar", "Recommendations", "Home")</li>
                 <li>@Html.ActionLink("Serier", "Series", "Home")</li>
                 <li>@Html.ActionLink("Nyheter & Sport", "News", "Home")</li>
+                @if(User.Identity.IsAuthenticated)
+                {
+                    <li>@Html.ActionLink("Logga Ut", "SignOut", "Account")</li>
+                }
             </ul>
         </nav>
     </header>

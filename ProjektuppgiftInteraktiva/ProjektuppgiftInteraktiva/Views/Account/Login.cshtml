@@ -2,18 +2,32 @@
 @{
     ViewBag.Title = "Logga In";
 }
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
 
 <div id="login">
-    <form action="nope.html">
-        Användarnamn:<br>
-        <input type="text" name="username" value="">
-        <br>Lösenord<br>
-        <input type="password" value="">
-        <br>
-        <br>
-        <input type="submit" value="Logga in">
-        <br>
-        <span class="psw">Forgot <a href="#">password?</a></span>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        @Html.LabelFor(model => model.Username, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Username, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Username, "", new { @class = "text-danger" })
+            </div>
+        </div>
 
-    </form>
-</div>*@
+    <div class="form-group">
+        @Html.LabelFor(Model => Model.Password, htmlAttributes: new { @class = "contro.-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+             <input type="submit" value="Login" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+}
