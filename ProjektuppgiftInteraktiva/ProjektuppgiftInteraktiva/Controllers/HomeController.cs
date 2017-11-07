@@ -19,11 +19,10 @@ namespace ProjektuppgiftInteraktiva.Controllers
 
             return View();
         }
-        //[Authorize]
-        //För inloggad
-        //public ActionResult Login()
-        //{
-        //    return View();
-        //}
+        [Authorize]
+        public ActionResult Welcome()
+        {
+            return View();
+        }
     }
 }

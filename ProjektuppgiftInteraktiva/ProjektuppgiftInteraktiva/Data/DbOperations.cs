@@ -14,11 +14,10 @@ namespace ProjektuppgiftInteraktiva.Data
         {
             var user = db.User.Where(u => u.UserName.Equals(username) && u.Password.Equals(password));
 
-            if (user.Any())
-            {
-                return true;
-            }
-            else return false;
+            if (user.Any())            
+                return true;            
+            else
+                return false;
         }
     }
 }

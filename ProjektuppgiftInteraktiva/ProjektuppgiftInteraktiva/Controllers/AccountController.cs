@@ -11,23 +11,31 @@ namespace ProjektuppgiftInteraktiva.Controllers
 {
     public class AccountController : Controller
     {
-        DbOperations db = new DbOperations();
+        private DbOperations db = new DbOperations();
         // GET: Account
         public ActionResult Login()
         {
             return View();
         }
         [HttpPost]
-        public ActionResult Login(LoginVM model, string ReturnUrl)
+        public ActionResult Login(LoginVM model, string returnUrl)
         {
             if (ModelState.IsValid)
             {
 
-                if (db.CheckUserCredentials(model.Username, model.Password))
+                if (db.CheckUserCredentials(model.UserName, model.Password))
                 {
                     // skapar en login cooki som försvinner när browser stängs.
-                    FormsAuthentication.SetAuthCookie(model.Username, false);
-                    return Redirect(ReturnUrl);
+                    FormsAuthentication.SetAuthCookie(model.UserName, false);
+
+                    if (!String.IsNullOrEmpty(returnUrl))
+                    {
+                        return Redirect(returnUrl);
+                    }
+                    else
+                    {
+                        return RedirectToAction("Welcome", "Home");
+                    }
                 }
 
                 else

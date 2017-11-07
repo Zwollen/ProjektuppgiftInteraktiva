@@ -9,7 +9,7 @@ namespace ProjektuppgiftInteraktiva.Models.ViewModels
     public class LoginVM
     {
         [Required(ErrorMessage = "Du måste fylla i Användarnamn")]
-        public string Username { get; set; }
+        public string UserName { get; set; }
         [Required(ErrorMessage = "Du måste fylla i Lösenord")]
         [DataType(DataType.Password)]
         public string Password { get; set; }
