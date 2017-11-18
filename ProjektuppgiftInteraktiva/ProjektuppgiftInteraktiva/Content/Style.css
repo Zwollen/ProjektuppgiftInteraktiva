@@ -237,4 +237,10 @@ ul.social li img
 	{	
 	background: #404040;	
 	}
+
+    nav dl dt {
+        display: inline-block;
+        float: left;
+        padding: 10px;
+    }
 }
